@@ -2,60 +2,57 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow: hidden;
 }
 header {
-    padding: 1em;
-    text-align: center;
+    padding: 20px;
+    width: 100%;
 }
 h1 {
-    letter-spacing: 1.5em;
     font-weight: 300;
+    letter-spacing: 1.5em;
+    text-align: center;
 }
-ol {
-    margin: 2em;
-}
-li {
-    list-style: none;
+.spell-dot > p {
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.15em;
     color: white;
-    padding: 1em;
+    padding-left: 0.75em;
     display: none;
 }
 .spell-dot {
     background-color: black;
-    margin: 0.5em;
-    width: 95%;
+    margin: 0.5em auto;
+    width: 80%;
     height: 57px;
 }
 .spell-dot:hover {
-    cursor: crosshair;
+    cursor: context-menu;
 }
 .demo {
-    width: 95%;
-    /* display: flex; */
+    width: 80%;
     display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 .description {
     font-weight: 300;
     letter-spacing: 0.075em;
-    display: fixed;
-    left: 0;
-    top: 0;
-    width: 40%;
+    width: 500px;
     margin: 1.5em;
     text-align: justify;
 }
 .illustration {
-    position: relative;
-    left: 10em;
     font-weight: 500;
-    background-color: black;
+    filter: invert(10%);
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    margin: 2em;
+    margin: 2em 100px 2em 100px;
 }
 img {
     border-radius: 50%;
@@ -64,16 +61,17 @@ img {
     filter: opacity(95%);
 }
 img:hover {
-    filter: opacity(75%);
-    cursor: crosshair;
+    filter: invert(90%);
+    cursor: zoom-in;
 }
 footer {
     font-size: 10px;
     color: rgb(100,100,100);
+    background-color: rgba(255,255,255,0.85);
     position: fixed;
     left: 0;
-    bottom: 2em;
+    bottom: 0;
+    padding: 20px;
     width: 100%;
-    padding: 1em;
     text-align: center;
 }

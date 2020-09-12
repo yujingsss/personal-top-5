@@ -3,7 +3,7 @@ let enterdot = document.querySelectorAll(".spell-dot");
 
 const demos = Array.from(document.querySelectorAll(".demo"));
 
-const spellnames = Array.from(document.querySelectorAll("li"));
+const spellnames = Array.from(document.querySelectorAll(".spell-dot > p"));
 
 let clicked = [false, false, false, false, false];
 // console.log(clicked);
@@ -64,36 +64,24 @@ function showdetail(event) {
             clicked[4] = false;
         }
     }
-    // dotnum == 0 ? demos[0].style.display = "flex" :
-    // dotnum == 1 ? demos[1].style.display = "flex" :
-    // dotnum == 2 ? demos[2].style.display = "flex" :
-    // dotnum == 3 ? demos[3].style.display = "flex" :
-    // demos[4].style.display = "flex";
-
-    // dotnum == 0 ? demos[0].style.display = "none" :
-    // dotnum == 1 ? demos[1].style.display = "none" :
-    // dotnum == 2 ? demos[2].style.display = "none" :
-    // dotnum == 3 ? demos[3].style.display = "none" :
-    // demos[4].style.display = "none";
-
 }
 function showspellname(event) {
     let dotnum = dots.findIndex(function (matchdot) {
         return matchdot === event.target;
     });
     dotnum == 0 ? spellnames[0].style.display = "inline-block" :
-    dotnum == 1 ? spellnames[1].style.display = "inline-block" :
-    dotnum == 2 ? spellnames[2].style.display = "inline-block" :
-    dotnum == 3 ? spellnames[3].style.display = "inline-block" :
-    spellnames[4].style.display = "inline-block";
+        dotnum == 1 ? spellnames[1].style.display = "inline-block" :
+            dotnum == 2 ? spellnames[2].style.display = "inline-block" :
+                dotnum == 3 ? spellnames[3].style.display = "inline-block" :
+                    spellnames[4].style.display = "inline-block";
 }
 function hidespellname(event) {
     let dotnum = dots.findIndex(function (matchdot) {
         return matchdot === event.target;
     });
     dotnum == 0 ? spellnames[0].style.display = "none" :
-    dotnum == 1 ? spellnames[1].style.display = "none" :
-    dotnum == 2 ? spellnames[2].style.display = "none" :
-    dotnum == 3 ? spellnames[3].style.display = "none" :
-    spellnames[4].style.display = "none";
+        dotnum == 1 ? spellnames[1].style.display = "none" :
+            dotnum == 2 ? spellnames[2].style.display = "none" :
+                dotnum == 3 ? spellnames[3].style.display = "none" :
+                    spellnames[4].style.display = "none";
 }
